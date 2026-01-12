@@ -1,8 +1,8 @@
-killer-ddos-store/
+killer-store/
 │
-├── index.html       ← Ye tumhara Home page + Game selection + Price cards + Modal
-├── style.css        ← Ye tumhare website ka design + neon look + responsive
-├── script.js        ← Ye tumhare game list + price card + modal + UPI simulation ka code
-├── login.html       ← Ye admin login page (KILLERDDOS / @KILLERDDOS123)
-├── admin.html       ← Ye admin panel (abhi simple, future me price add/edit/delete)
-└── README.md        ← Optional, description ya instructions
+├── index.html       ← Home + Games + Price List + Modal/Payment
+├── style.css        ← Neon UI + Responsive + Animations
+├── script.js        ← Dynamic Products + Modal + Price List
+├── login.html       ← Admin Login (KILLERDDOS / @KILLERDDOS123)
+├── admin.html       ← Admin Panel: Add/Edit/Delete Games & Prices + Orders
+└── README.md        ← Optional instructions / description
