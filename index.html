@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>KILLER DDOS STORE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KILLER DDOS STORE</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -19,8 +19,9 @@
   <h2>Select Game</h2>
   <div class="game-grid">
     <div class="game-card" onclick="openGame('BGMI')">BGMI</div>
-    <div class="game-card" onclick="openGame('FREEFIRE')">Free Fire</div>
-    <div class="game-card" onclick="openGame('CODM')">COD Mobile</div>
+    <div class="game-card" onclick="openGame('Free Fire')">Free Fire</div>
+    <div class="game-card" onclick="openGame('COD Mobile')">COD Mobile</div>
+    <div class="game-card" onclick="openGame('All')">All Games</div>
   </div>
 </section>
 
@@ -28,6 +29,22 @@
   <h2 id="gameTitle"></h2>
   <div id="priceList" class="price-grid"></div>
 </section>
+
+<!-- Modal -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modalProductName"></h3>
+    <p>Price: ₹<span id="modalPrice"></span></p>
+    <label>Quantity:</label>
+    <input type="number" id="modalQty" min="1" value="1">
+    <button id="payButton">Pay via UPI/QR</button>
+    <div id="codeSection" style="margin-top:15px; display:none;">
+      <h4>Your Code:</h4>
+      <p id="deliveredCode" style="color:#00f5ff;font-weight:bold;"></p>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
