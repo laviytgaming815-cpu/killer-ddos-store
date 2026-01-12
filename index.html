@@ -18,10 +18,10 @@
 <section id="games" class="games">
   <h2>Select Game</h2>
   <div class="game-grid">
-    <div class="game-card" onclick="openGame('BGMI')">BGMI</div>
-    <div class="game-card" onclick="openGame('Free Fire')">Free Fire</div>
-    <div class="game-card" onclick="openGame('COD Mobile')">COD Mobile</div>
-    <div class="game-card" onclick="openGame('All')">All Games</div>
+    <div class="game-card" data-game="BGMI">BGMI</div>
+    <div class="game-card" data-game="Free Fire">Free Fire</div>
+    <div class="game-card" data-game="COD Mobile">COD Mobile</div>
+    <div class="game-card" data-game="All">All Games</div>
   </div>
 </section>
 
@@ -29,22 +29,6 @@
   <h2 id="gameTitle"></h2>
   <div id="priceList" class="price-grid"></div>
 </section>
-
-<!-- Modal -->
-<div id="orderModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 id="modalProductName"></h3>
-    <p>Price: ₹<span id="modalPrice"></span></p>
-    <label>Quantity:</label>
-    <input type="number" id="modalQty" min="1" value="1">
-    <button id="payButton">Pay via UPI/QR</button>
-    <div id="codeSection" style="margin-top:15px; display:none;">
-      <h4>Your Code:</h4>
-      <p id="deliveredCode" style="color:#00f5ff;font-weight:bold;"></p>
-    </div>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>
