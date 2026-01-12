@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Login - KILLER DDOS STORE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <title>Admin Login</title>
 </head>
 <body>
-<section class="login-page">
-  <h2>Login</h2>
-  <form id="loginForm">
-    <input type="text" id="username" placeholder="Username" required>
-    <input type="password" id="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-  </form>
-  <p>Admin: admin / admin123</p>
-</section>
-<script src="script.js"></script>
+  <h2>Admin Login</h2>
+  <input id="u" placeholder="Username"><br>
+  <input id="p" type="password" placeholder="Password"><br>
+  <button onclick="login()">Login</button>
+
+  <script>
+    function login() {
+      const u = document.getElementById("u").value;
+      const p = document.getElementById("p").value;
+
+      if (u === "KILLERDDOS" && p === "@KILLERDDOS123") {
+        window.location.href = "admin.html";
+      } else {
+        alert("Wrong login");
+      }
+    }
+  </script>
 </body>
 </html>
