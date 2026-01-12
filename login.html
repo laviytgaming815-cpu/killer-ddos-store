@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Admin Login</title>
-</head>
+<head><title>Admin Login</title></head>
 <body>
-  <h2>Admin Login</h2>
-  <input id="u" placeholder="Username"><br>
-  <input id="p" type="password" placeholder="Password"><br>
-  <button onclick="login()">Login</button>
+<h2>Admin Login</h2>
+<input id="u" placeholder="Username"><br>
+<input id="p" type="password" placeholder="Password"><br>
+<button onclick="login()">Login</button>
 
-  <script>
-    function login() {
-      const u = document.getElementById("u").value;
-      const p = document.getElementById("p").value;
-
-      if (u === "KILLERDDOS" && p === "@KILLERDDOS123") {
-        window.location.href = "admin.html";
-      } else {
-        alert("Wrong login");
-      }
-    }
-  </script>
+<script>
+function login(){
+  const u=document.getElementById("u").value;
+  const p=document.getElementById("p").value;
+  if(u==="KILLERDDOS" && p==="@KILLERDDOS123"){
+    window.location.href="admin.html";
+  }else alert("Wrong login");
+}
+</script>
 </body>
 </html>
