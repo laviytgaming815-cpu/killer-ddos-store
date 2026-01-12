@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KILLER DDOS STORE</title>
+<title>KILLER STORE</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <h1>KILLER DDOS STORE</h1>
+  <h1>KILLER STORE</h1>
   <nav>
     <a href="#games">Games</a>
     <a href="login.html">Admin</a>
@@ -20,8 +20,6 @@
   <div class="game-grid">
     <div class="game-card" data-game="BGMI">BGMI</div>
     <div class="game-card" data-game="Free Fire">Free Fire</div>
-    <div class="game-card" data-game="COD Mobile">COD Mobile</div>
-    <div class="game-card" data-game="All">All Games</div>
   </div>
 </section>
 
@@ -29,6 +27,24 @@
   <h2 id="gameTitle"></h2>
   <div id="priceList" class="price-grid"></div>
 </section>
+
+<!-- Modal -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modalProductName"></h3>
+    <p>Price: ₹<span id="modalPrice"></span></p>
+    <label>Quantity:</label>
+    <input type="number" id="modalQty" min="1" value="1">
+    <label>Player ID:</label>
+    <input type="text" id="playerID" placeholder="Enter Player ID">
+    <button id="payButton">Pay via UPI/QR</button>
+    <div id="codeSection" style="margin-top:15px; display:none;">
+      <h4>Your Code:</h4>
+      <p id="deliveredCode" style="color:#00f5ff;font-weight:bold;"></p>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
