@@ -1,53 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KILLER DDOS STORE</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>KILLER DDOS STORE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <h1>KILLER DDOS STORE</h1>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="login.html">Login</a>
-    <a href="admin.html">Admin</a>
+    <a href="#games">Games</a>
+    <a href="login.html">Admin</a>
   </nav>
 </header>
 
-<section class="hero">
-  <h2>Top-Up Store</h2>
-  <p>BGMI | Free Fire | COD Mobile | All Games</p>
+<section id="games" class="games">
+  <h2>Select Game</h2>
+  <div class="game-grid">
+    <div class="game-card" onclick="openGame('BGMI')">BGMI</div>
+    <div class="game-card" onclick="openGame('FREEFIRE')">Free Fire</div>
+    <div class="game-card" onclick="openGame('CODM')">COD Mobile</div>
+  </div>
 </section>
 
-<!-- Tabs -->
-<div class="tabs">
-  <button class="tab-button active" data-game="BGMI">BGMI</button>
-  <button class="tab-button" data-game="Free Fire">Free Fire</button>
-  <button class="tab-button" data-game="COD Mobile">COD Mobile</button>
-  <button class="tab-button" data-game="All">All Games</button>
-</div>
-
-<!-- Products list -->
-<section class="products" id="product-list"></section>
-
-<!-- Modal -->
-<div id="orderModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 id="modalProductName"></h3>
-    <p>Price: ₹<span id="modalPrice"></span></p>
-    <label>Quantity:</label>
-    <input type="number" id="modalQty" min="1" value="1">
-    <button id="payButton">Pay via QR / UPI</button>
-    <div id="codeSection" style="margin-top:15px; display:none;">
-      <h4>Your Code:</h4>
-      <p id="deliveredCode" style="color:#00f5ff;font-weight:bold;"></p>
-    </div>
-  </div>
-</div>
+<section id="prices" class="prices hidden">
+  <h2 id="gameTitle"></h2>
+  <div id="priceList" class="price-grid"></div>
+</section>
 
 <script src="script.js"></script>
 </body>
